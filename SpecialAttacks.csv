@@ -1,0 +1,10 @@
+Warrior,Quake,30,P,True,Quake,True,1,False
+Warrior,Cleave,25,P,True,Cleave,False,1,False
+Mage,Magic Missile,15,M,True,MagicMissile,True,1,False
+Mage,Cloudkill,50,M,True,Cloudkill,True,1,False
+Mage,Wall of Fire,35,M,False,WallOfFire,False,1,False
+Mage,Freeze,40,M,True,Freeze,True,1,False
+Rogue,Backstab,25,P,True,Backstab,False,1,False
+Rogue,Poison Dart,35,P,True,PoisonDart,True,1,False
+Rogue,Knife Barrage,30,P,True,KnifeBarrage,True,4,False
+Rogue,Whirlwind,45,P,True,Whirlwind,False,3,True

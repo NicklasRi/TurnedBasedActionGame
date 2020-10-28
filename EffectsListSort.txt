@@ -1,0 +1,2 @@
+sameEffectsList = [e for e in Rules.effects if e.getName() == effectName and e.getAffected() == affected]
+                sameEffectsList.sort(lambda x: x.getEndRound())
