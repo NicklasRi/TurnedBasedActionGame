@@ -167,14 +167,14 @@ class Rules():
 
     @staticmethod
     def doBlock(combatant):
-        stamRegen = constants.STAMREGENBLOCK + Rules.getModifier(combatant.vitality)
+        stamRegen = constants.STAMREGENBLOCK + Rules.getModifier(combatant.getAdjustedVitality())
         previousStamina = combatant.getStamina()
         combatant.setStamina(previousStamina + stamRegen)
         print(f'By blocking, {combatant.getName()} recovered {str(combatant.getStamina() - previousStamina)} stamina.')
 
     @staticmethod
     def doRest(combatant):
-        stamRegen = constants.STAMREGENREST + Rules.getModifier(combatant.vitality)
+        stamRegen = constants.STAMREGENREST + Rules.getModifier(combatant.getAdjustedVitality())
         previousStamina = combatant.getStamina()
         combatant.setStamina(previousStamina + stamRegen)
         print(f'By resting, {combatant.getName()} recovered {str(combatant.getStamina() - previousStamina)} stamina.')
@@ -316,7 +316,7 @@ class Rules():
 
     #returns a bonus based on the value of an attribute
     def getModifier(score):
-        if score == 0:
+        if score <= 0:
             return -5
         elif score <= 3:
             return -4
@@ -368,7 +368,7 @@ class Rules():
             stamCost = cbt.getStamCost()
         elif actionName == "Special Attack" and specialAttack != None:
             stamCost = specialAttack.getStamCost()
-        stamCost -= Rules.getModifier(cbt.getEndurance())
+        stamCost -= Rules.getModifier(cbt.getAdjustedEndurance())
         if stamCost <= 0:
             stamCost = 1
         return stamCost

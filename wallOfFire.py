@@ -1,12 +1,13 @@
 from rules import EffectInfo
 from specialAttack import SpecialAttackResults
 import random
+import constants
 
 class WallOfFire:
     def execute(self, cAction, tAction, roundCount):
         effects = []
         combatant = cAction.getCombatant()
-        effect = EffectInfo("Wall of Fire", roundCount + 3, combatant, True, False, False, '')
+        effect = EffectInfo("Wall of Fire", roundCount + constants.WALLOFFIREDURATION, combatant, True, False, False, '')
         effects.append(effect)
         results = SpecialAttackResults('', False, 0, effects, None)
         return results

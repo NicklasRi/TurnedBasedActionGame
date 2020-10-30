@@ -17,3 +17,9 @@ class Utils:
         if value < minimum:
             value = minimum
         return value
+    
+    @staticmethod
+    def checkMaxValue(value, maximum):
+        if value > maximum:
+            value = maximum
+        return value

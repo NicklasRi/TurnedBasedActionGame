@@ -426,10 +426,11 @@ class Game:
 
     @staticmethod
     def displayEffects(combatants):
+        
         for combatant in combatants:
-            print()
             effects = combatant.getEffects()
             if len(effects) != 0:
+                print()
                 print(f'{combatant.getName()}:')
 
             for effect in effects:

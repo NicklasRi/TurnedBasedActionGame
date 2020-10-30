@@ -142,6 +142,8 @@ class Combatant(metaclass = abc.ABCMeta):
     def setFaith(self, value):
         self.faith = value
 
+
+    #temporary stats are adjustments applied to normal stats to get adjusted stats
     def getTemporaryVitality(self):
         return self.tVitality
 

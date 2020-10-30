@@ -15,7 +15,7 @@ class Cleave:
             damage = random.randint(3,30) + Rules.getModifier(cAction.getCombatant().getAdjustedStrength())
             damage = Utils.checkMinValue(damage, 0)
             percent = random.randint(1,100)
-            if percent <= 10:
+            if percent <= constants.CLEAVEPER:
                 effect = EffectInfo("Cleave", roundCount + constants.CLEAVEDURATION, target, False, False, False, f'{target.getName()} has been dazed!')
                 effects.append(effect)
         sResults = SpecialAttackResults('', hitOrMiss, damage, effects, target)
