@@ -275,7 +275,7 @@ class Rules():
         #special attacks with results that do not have targets are simply performed
         else:
             print(f'{cName} performed {specialAttackName}!')
-                    
+
     def filterNones(element):
         return element.getTarget() != None
 
@@ -312,7 +312,7 @@ class Rules():
                     Rules.effects[i] == effect
                     replaced = True
             if not replaced:
-                Rules.effects.append(effect)
+                Rules.effects.insert(0,effect)
 
     #returns a bonus based on the value of an attribute
     def getModifier(score):

@@ -4,8 +4,8 @@ from test import Test
 
 
 
-
+""" 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main() """
 
 Game.run()
