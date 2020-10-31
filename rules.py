@@ -189,9 +189,7 @@ class Rules():
             target = tAction.getCombatant()
         specialAttack = cAction.getSpecialAttack()
         specialAttackName = specialAttack.getName()
-        """for now, only physical attacks are subject to defensive effects
-        ***subject to change*** """
-        if specialAttack.getAtkType() == "P" and target != None:
+        if target != None:
             Rules.applyDefensiveEffects(cAction, target, specialAttackNamesDictionary)
         results = None
 
